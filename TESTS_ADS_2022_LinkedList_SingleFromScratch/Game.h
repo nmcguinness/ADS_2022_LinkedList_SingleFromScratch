@@ -4,7 +4,7 @@ using namespace std;
 struct Game {
 	string username;	int rank;	double averageTTC;
 };
-
+/*
 class Game {
 	string username;	int rank;	double averageTTC;
 public:
@@ -13,3 +13,4 @@ public:
 
 	string getUserName() const { return this->username; }
 };
+*/

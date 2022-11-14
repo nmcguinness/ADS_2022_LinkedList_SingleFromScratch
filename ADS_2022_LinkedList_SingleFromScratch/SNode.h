@@ -30,10 +30,13 @@ public:
 	SNode* getNext() const { return this->pNext; }
 
 	void insertAfter(T data) {
-		//add node to the end
+		throw logic_error("Hey dumb4ss, you forgot to write me!");
 	}
 
-	//TODO - add operators <<, ==, <, <=
+	void setNext(SNode<T>* next)
+	{
+		this->pNext = next;
+	}
 };
 
 //#include "SNode.cpp"
