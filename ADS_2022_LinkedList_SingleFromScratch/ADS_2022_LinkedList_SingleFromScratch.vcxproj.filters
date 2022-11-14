@@ -23,5 +23,8 @@
     <ClInclude Include="SNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
