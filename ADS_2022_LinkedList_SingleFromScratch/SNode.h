@@ -21,22 +21,9 @@ public:
 		this->data = data;
 		this->pNext = nullptr;
 	}
-
-	//getters
 	T getData() const {
 		//this->data = 99999;
 		return this->data;
 	}
 	SNode* getNext() const { return this->pNext; }
-
-	void insertAfter(T data) {
-		throw logic_error("Hey dumb4ss, you forgot to write me!");
-	}
-
-	void setNext(SNode<T>* next)
-	{
-		this->pNext = next;
-	}
 };
-
-//#include "SNode.cpp"
