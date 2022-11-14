@@ -17,13 +17,19 @@ private:
 
 public:
 	SNode(T data) {
-		//set the data to default, set next as nullptr
 		this->data = data;
 		this->pNext = nullptr;
 	}
 	T getData() const {
-		//this->data = 99999;
 		return this->data;
 	}
+
+	void setNext(SNode<T>* pNext) {
+		this->pNext = pNext;
+	}
+
 	SNode* getNext() const { return this->pNext; }
-};
+
+	void insertAfter(T data) {
+		throw logic_error("Hey dumb4ss, you forgot to write me!");
+	};
