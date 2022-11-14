@@ -50,5 +50,21 @@ namespace TESTSADS2022LinkedListSingleFromScratch
 			Assert::IsNull(pNode->getNext());
 		}
 #pragma endregion
+
+		TEST_METHOD(TestSNodeValidChain) {
+			SNode<int>* pNode1 = new SNode<int>(1);
+			SNode<int>* pNode2 = new SNode<int>(2);
+			SNode<int>* pNode3 = new SNode<int>(3);
+
+			pNode1->setNext(pNode2);
+			pNode2->setNext(pNode3);
+
+			SNode<int>* pStart = pNode1;
+			int target = 3;
+
+			SNode<int>* pLast = pStart->getNext()->getNext();
+			Assert::AreEqual(target, pLast->getData());
+			Assert::IsNull(pLast->getNext());
+		}
 	};
 }
