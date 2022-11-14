@@ -14,19 +14,22 @@ namespace TESTSADS2022LinkedListSingleFromScratch
 		TEST_METHOD(TestSNodeValid)
 		{
 			//'new' keyword creates a SNode in RAM and returns address
-			SNode* pNode = new SNode(56);
+			SNode<int>* pNode = new SNode<int>(56);
 			Assert::IsNotNull(pNode);
+		}
+
+		TEST_METHOD(TestSNodeValidGame) {
 		}
 
 		TEST_METHOD(TestSNodeGetData)
 		{
-			SNode* pNode = new SNode(56);
+			SNode<int>* pNode = new SNode<int>(56);
 			Assert::AreEqual(56, pNode->getData());
 		}
 
 		TEST_METHOD(TestSNodeGetNext)
 		{
-			SNode* pNode = new SNode(56);
+			SNode<int>* pNode = new SNode<int>(56);
 			Assert::IsNull(pNode->getNext());
 		}
 	};
