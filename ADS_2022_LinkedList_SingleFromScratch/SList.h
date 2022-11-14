@@ -6,19 +6,29 @@ class SList
 {
 	SNode<T>* pHead;
 	SNode<T>* pTail;
-private:
+public:
 	SList()
 	{
 		head = tail = nullptr;
 	}
 
 	void append(T data) {
+		//make new node
+		SNode<T>* pNew = SNode<T>(data);
+
+		//if first then set head to be new node
+		if (head == nullptr)
+		{
+			pHead = pTail = pNew;
+			return;
+		}
+
 		SNode<T>* pCurrent = pHead;
 		while (pCurrent != nullptr)
 		{
 			pCurrent = pCurrent->getNext();
 		}
-		SNode<T>* pNew = SNode<T>(data);
+
 		pCurrent->setNext(pNew);
 	}
 };

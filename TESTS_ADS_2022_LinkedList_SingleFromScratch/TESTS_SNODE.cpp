@@ -8,7 +8,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace TESTSADS2022LinkedListSingleFromScratch
 {
-	TEST_CLASS(TESTSADS2022LinkedListSingleFromScratch)
+	TEST_CLASS(TESTS_SNODE)
 	{
 	public:
 
