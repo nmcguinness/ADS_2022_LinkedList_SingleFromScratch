@@ -8,21 +8,14 @@ namespace TESTSADS2022LinkedListSingleFromScratch
 {
 	TEST_CLASS(TESTS_SLIST)
 	{
-		//static SList<int> singleList;
-
 	public:
-		TEST_CLASS_INITIALIZE(InitializeSList)
-		{
-			//add core nodes for testing
+		TEST_METHOD(TestValidSList) {
+			//test if constructor works!
+			SList<int>* ptrSList = new SList<int>();
+			Assert::IsNotNull(ptrSList);
+			Assert::IsTrue(ptrSList->isEmpty());
+			//Assert::AreEqual(ptrSList->getSize(), 0);
 		}
-
-		TEST_METHOD(TestValidSList)
-		{
-			SList<int>* ptrSingleList = new SList<int>();
-			Assert::IsNotNull(ptrSingleList);
-		}
-		TEST_METHOD(TestValidAppend)
-		{
-		}
+		TEST_METHOD()
 	};
 }

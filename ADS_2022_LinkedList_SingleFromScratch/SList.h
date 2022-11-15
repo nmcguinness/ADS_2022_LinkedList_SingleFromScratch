@@ -8,7 +8,7 @@ class SList
 	SNode<T>* pTail;
 	int size;
 
-	initialize()
+	void initialize()
 	{
 		pHead = pTail = nullptr;
 		size = 0;
@@ -27,6 +27,11 @@ public:
 	bool isEmpty()
 	{
 		return (pHead == nullptr && pTail == nullptr);
+	}
+
+	int getSize()
+	{
+		return this->size;
 	}
 
 	void append(T data)
