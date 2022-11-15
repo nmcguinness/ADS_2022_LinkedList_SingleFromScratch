@@ -6,29 +6,58 @@ class SList
 {
 	SNode<T>* pHead;
 	SNode<T>* pTail;
+	int size;
+
+	initialize()
+	{
+		pHead = pTail = nullptr;
+		size = 0;
+	}
 public:
 	SList()
 	{
-		head = tail = nullptr;
+		initialize();
+	}
+	~SList()
+	{
+		//free or clear the list if size > 0
+		initialize();
 	}
 
-	void append(T data) {
-		//make new node
-		SNode<T>* pNew = SNode<T>(data);
+	bool isEmpty()
+	{
+		return (pHead == nullptr && pTail == nullptr);
+	}
 
-		//if first then set head to be new node
-		if (head == nullptr)
+	void append(T data)
+	{
+		//"new" keyword ALWAYS returns ADDRESS of new block of allocated space for SNode
+		SNode<T>* pNew = new SNode<T>(data);
+
+		//list is empty
+		if (isEmpty())
 		{
 			pHead = pTail = pNew;
-			return;
 		}
-
-		SNode<T>* pCurrent = pHead;
-		while (pCurrent != nullptr)
+		//list is not empty
+		else
 		{
-			pCurrent = pCurrent->getNext();
+			SNode<T>* pCurrent = pHead;
+			while (pCurrent->getNext() != nullptr)
+			{
+				pCurrent = pCurrent->getNext();
+			}
+			pCurrent->setNext(pNew);
 		}
-
-		pCurrent->setNext(pNew);
+		size++;
+	}
+	void removeTail()
+	{
+		size--;
 	}
 };
+
+/*
+template <typename T>
+T add(T x, T y) { return x + y; }
+*/

@@ -27,9 +27,18 @@ public:
 	void setNext(SNode<T>* pNext) {
 		this->pNext = pNext;
 	}
-
+	/*
+	bool setNext(SNode<T>* pNext) {
+		if (pNext == nullptr)
+			return false;
+		this->pNext = pNext;
+		return true;
+	}
+	*/
 	SNode* getNext() const { return this->pNext; }
 
+	//TODO - NMCG - complete insertAfter
 	void insertAfter(T data) {
 		throw logic_error("Hey dumb4ss, you forgot to write me!");
-	};
+	}
+};
