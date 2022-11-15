@@ -16,6 +16,27 @@ namespace TESTSADS2022LinkedListSingleFromScratch
 			Assert::IsTrue(ptrSList->isEmpty());
 			//Assert::AreEqual(ptrSList->getSize(), 0);
 		}
-		TEST_METHOD()
+		TEST_METHOD(TestAppendValid)
+		{
+			//make list
+			SList<int>* ptrSList = new SList<int>();
+			//append
+			ptrSList->append(10);
+			//size
+			Assert::IsFalse(ptrSList->isEmpty());
+			Assert::AreEqual(ptrSList->getSize(), 1);
+			//append
+			ptrSList->append(20);
+			//size
+			Assert::AreEqual(ptrSList->getSize(), 2);
+
+			//get last data and check
+			int data = ptrSList->getHead()->getNext()->getData();
+			Assert::AreEqual(data, 20);
+
+			//another way to get the last data and check
+			SNode<int>* pLast = ptrSList->getHead()->getNext();
+			Assert::AreEqual(pLast->getData(), 20);
+		}
 	};
 }

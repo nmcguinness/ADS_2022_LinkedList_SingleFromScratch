@@ -14,6 +14,10 @@ class SList
 		size = 0;
 	}
 public:
+	SNode<T>* getHead() {
+		return this->pHead;
+	}
+
 	SList()
 	{
 		initialize();
