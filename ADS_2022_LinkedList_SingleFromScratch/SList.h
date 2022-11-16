@@ -38,6 +38,18 @@ public:
 		return this->size;
 	}
 
+	SNode<T>* findNode(SNode<T>* pCurrent, const T& key)
+	{
+		if (pCurrent == nullptr)
+			return nullptr;
+
+		//interrogate current node
+		if (pCurrent->getData() == key)
+			return pCurrent;
+		else
+			findNode(pCurrent->getNext(), key);
+	}
+
 	void append(T data)
 	{
 		//"new" keyword ALWAYS returns ADDRESS of new block of allocated space for SNode
