@@ -130,6 +130,7 @@
     <ClCompile Include="ADS_2022_LinkedList_SingleFromScratch.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ADS_2022_LinkedList_SingleFromScratch.h" />
     <ClInclude Include="SList.h" />
     <ClInclude Include="SNode.h" />
   </ItemGroup>

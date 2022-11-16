@@ -26,5 +26,8 @@
     <ClInclude Include="SList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ADS_2022_LinkedList_SingleFromScratch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

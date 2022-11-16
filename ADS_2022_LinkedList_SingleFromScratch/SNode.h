@@ -1,4 +1,5 @@
 #pragma once
+#include <exception>
 
 /// <summary>
 /// Represents a single linked list node for LinkedList
@@ -39,6 +40,6 @@ public:
 
 	//TODO - NMCG - complete insertAfter
 	void insertAfter(T data) {
-		throw logic_error("Hey dumb4ss, you forgot to write me!");
+		throw std::logic_error("Hey dumb4ss, you forgot to write me!");
 	}
 };
